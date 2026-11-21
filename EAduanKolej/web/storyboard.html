@@ -5,24 +5,43 @@
         <meta charset="UTF-8">
         <title>E-Aduan Kolej Storyboard</title>
         <style>
-        body{margin:0;font-family:Arial,sans-serif;background:#f3f5f9;color:#1e293b}
-        header{background:#1e293b;color:#fff;padding:20px}
-        nav{background:#fff;padding:8px 20px;position:sticky;top:0;border-bottom:1px solid #ddd}
-        nav a{margin-right:12px;color:#1e293b;text-decoration:none;font-size:14px}
-        main{max-width:1100px;margin:auto;padding:20px}
-        .lane{background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px;margin-bottom:10px}
-        .box{display:inline-block;border:2px solid #1d4ed8;border-radius:6px;padding:6px 10px;margin:4px;font-weight:bold;font-size:13px}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(450px,1fr));gap:16px}
-        .shot{background:#fff;border:1px solid #ddd;border-radius:8px;overflow:hidden}
-        .shot h3{margin:0;padding:10px;border-bottom:1px solid #ddd;font-size:15px}
-        .screen{padding:12px;background:#fafbfd;font-size:13px}
-        .top{background:#1d4ed8;color:#fff;padding:8px;border-radius:5px;margin-bottom:10px}
-        .field{border:1px solid #ccc;background:#fff;padding:6px;border-radius:4px;margin-bottom:6px;color:#999}
-        .btn{display:inline-block;background:#1d4ed8;color:#fff;padding:5px 12px;border-radius:4px;font-size:12px}
-        table{width:100%;border-collapse:collapse;font-size:12px;background:#fff}
-        th,td{border:1px solid #ddd;padding:5px}
-        th{background:#eef1f5}
-        .note{padding:10px;font-size:13px;color:#64748b;border-top:1px solid #ddd}
+            *{box-sizing:border-box}
+            body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:#f1f5f9;color:#1e293b}
+
+            header{background:#1e293b;color:#fff;padding:26px 24px}
+            header h1{margin:0;font-size:26px}
+            nav{background:#fff;padding:8px 24px;position:sticky;top:0;border-bottom:1px solid #d8dee6;z-index:5}
+            nav a{display:inline-block;margin:2px;padding:4px 10px;border-radius:14px;color:#1e293b;text-decoration:none;font-size:13px}
+            nav a:hover{background:#e2e8f0}
+
+            main{max-width:1100px;margin:auto;padding:24px}
+            h2{font-size:21px;margin:24px 0 10px}
+
+            .lane{background:#fff;border:1px solid #d8dee6;border-radius:10px;padding:14px;margin-bottom:10px;font-size:14px}
+            .lane b{color:#64748b}
+            .box{display:inline-block;background:#fff;border:2px solid #1e293b;border-radius:8px;padding:6px 12px;margin:4px;font-weight:600;font-size:13px}
+
+            .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:20px}
+
+            .shot{background:#fff;border:1px solid #d8dee6;border-radius:12px;overflow:hidden;box-shadow:0 2px 6px rgba(30,41,59,.06)}
+            .shot h3{margin:0;padding:10px 14px;font-size:14px;background:#e2e8f0;border-bottom:1px solid #d8dee6}
+
+            .screen{padding:14px;background:#fafbfc;font-size:13px;min-height:280px}
+            .top{display:flex;justify-content:space-between;align-items:center;background:#1e293b;color:#fff;padding:8px 12px;border-radius:6px;margin-bottom:12px;font-weight:600;font-size:13px}
+            .top small{font-weight:400;opacity:.9}
+            .field{border:1px solid #d8dee6;background:#fff;padding:7px 10px;border-radius:6px;margin-bottom:8px;color:#94a3b8;max-width:360px}
+            .btn{display:inline-block;background:#1e293b;color:#fff;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600}
+            .screen p{margin:8px 0}
+
+            table{width:100%;border-collapse:collapse;font-size:12px;background:#fff}
+            th,td{border:1px solid #d8dee6;padding:6px 8px;text-align:left}
+            th{background:#e2e8f0;color:#1e293b}
+
+            .note{padding:10px 14px;font-size:13px;color:#64748b;border-top:1px solid #d8dee6;background:#fff}
+            
+            .side{display:grid;grid-template-columns:120px 1fr;gap:12px}
+            .menu div{padding:6px 8px;border-radius:5px;background:#eef1f5;margin-bottom:4px;font-size:12px}
+            .menu .on{background:#1e293b;color:#fff;font-weight:600}
         </style>
     </head>
     <body>
@@ -48,6 +67,61 @@
                     <span class="box">Login</span> → <span class="box">Admin Dashboard</span> →
                     <span class="box">Manage Tickets</span> → <span class="box">Logout</span></div>
             </section>
+            
+                <section class="shot" id="p1">
+                    <h3>1. Login page</h3>
+                    <div class="screen">
+                        <div class="top">E-Aduan Kolej</div>
+                        <div class="field">Login as Student/Technician/Admin ▾</div>
+                        <div class="field">name@gmail.com</div>
+                        <div class="field">........</div>
+                        <span class="btn">Login</span>
+                        <p>No account? <u>Register here</u></p>
+                    </div>
+                    <div class="note">Checks email and password, creates a session, then redirects by role. Logout ends the session.</div>
+                </section>
+
+                <section class="shot" id="p2">
+                    <h3>2. Register page</h3>
+                    <div class="screen">
+                        <div class="top">E-Aduan Kolej · Create Account</div>
+                        <div class="field">Name</div>
+                        <div class="field">Matrics Number</div>
+                        <div class="field">Phone Number</div>
+                        <div class="field">Email</div>
+                        <div class="field">Password (min 8 characters)</div>
+                        <div class="field">Room: Block 4B - 4B-02-14 ▾</div>
+                        <span class="btn">Register</span>
+                        <p>Already have an account? <u>Back to login</u></p>
+                    </div>
+                    <div class="note">All fields required, valid email format, unique matrics number, password at least 8 characters.</div>
+                </section>
+
+                <section class="shot" id="p3">
+                    <h3>3. Student Dashboard</h3>
+                    <div class="screen">
+                        <div class="top"><span>E-Aduan Kolej</span><small>Hi, Nur Aina · <u>Logout</u></small></div>
+                        <div class="side">
+                            <div class="menu">
+                                <div class="on">Dashboard</div>
+                                <div>New Complaint</div>
+                                <div>My Tickets</div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr><th>Pending</th><th>In Progress</th><th>Resolved</th></tr>
+                                    <tr><td>1</td><td>1</td><td>3</td></tr>
+                                </table>
+                                <br>
+                                <span class="btn">+ New Complaint</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note">Shows a summary of the student's own tickets by status. The side menu links to other student pages.</div>
+                </section>
+
+
+            </div>
            
         </main>
     </body>
