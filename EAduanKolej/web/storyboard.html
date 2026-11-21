@@ -13,7 +13,6 @@
             nav{background:#fff;padding:8px 24px;position:sticky;top:0;border-bottom:1px solid #d8dee6;z-index:5}
             nav a{display:inline-block;margin:2px;padding:4px 10px;border-radius:14px;color:#1e293b;text-decoration:none;font-size:13px}
             nav a:hover{background:#e2e8f0}
-
             main{max-width:1100px;margin:auto;padding:24px}
             h2{font-size:21px;margin:24px 0 10px}
 
@@ -33,15 +32,43 @@
             .btn{display:inline-block;background:#1e293b;color:#fff;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600}
             .screen p{margin:8px 0}
 
+            .side{display:grid;grid-template-columns:120px 1fr;gap:12px}
+            .menu div{padding:6px 8px;border-radius:5px;background:#eef1f5;margin-bottom:4px;font-size:12px}
+            .menu .on{background:#1e293b;color:#fff;font-weight:600}
+
             table{width:100%;border-collapse:collapse;font-size:12px;background:#fff}
             th,td{border:1px solid #d8dee6;padding:6px 8px;text-align:left}
             th{background:#e2e8f0;color:#1e293b}
 
             .note{padding:10px 14px;font-size:13px;color:#64748b;border-top:1px solid #d8dee6;background:#fff}
-            
-            .side{display:grid;grid-template-columns:120px 1fr;gap:12px}
-            .menu div{padding:6px 8px;border-radius:5px;background:#eef1f5;margin-bottom:4px;font-size:12px}
-            .menu .on{background:#1e293b;color:#fff;font-weight:600}
+
+            .crumb{font-size:11px;color:#64748b;margin:0}
+            .page-title{font-size:16px;font-weight:700;margin:2px 0 10px}
+            .boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+            .ibox{border-radius:6px;overflow:hidden;border:1px solid #d8dee6}
+            .ibox .in{padding:10px 12px;display:flex;justify-content:space-between;align-items:center}
+            .ibox .num{font-size:24px;font-weight:700;line-height:1.1}
+            .ibox .lab{font-size:12px}
+            .ibox svg{width:30px;height:30px;opacity:.6}
+            .ibox .more{display:block;background:rgba(0,0,0,.05);padding:4px 12px;font-size:11px}
+            .amber{background:#fff7ed;color:#b45309}
+            .blue{background:#eff6ff;color:#1d4ed8}
+            .green{background:#ecfdf5;color:#047857}
+            .panel{background:#fff;border:1px solid #d8dee6;border-radius:8px;margin-bottom:10px}
+            .panel-h{padding:8px 10px;border-bottom:1px solid #d8dee6;font-weight:700;font-size:12px;display:flex;justify-content:space-between}
+            .panel-h span{font-weight:400;color:#64748b}
+            .panel-b{padding:10px}
+            .bars{display:flex;align-items:flex-end;gap:22px;height:90px;border-bottom:1px solid #d8dee6;padding:0 14px}
+            .bars div{flex:0 0 46px;background:#1e293b;border-radius:3px 3px 0 0;position:relative}
+            .bars div b{position:absolute;top:-16px;left:0;right:0;text-align:center;font-size:11px;color:#1e293b}
+            .bar-lab{display:flex;gap:22px;padding:4px 14px 0;font-size:11px;color:#64748b}
+            .bar-lab span{flex:0 0 46px;text-align:center}
+            .pill{padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600;white-space:nowrap}
+            .p-pending{background:#fdf0dc;color:#b45309}
+            .p-progress{background:#dbeafe;color:#1d4ed8}
+            .p-resolved{background:#dcf3ea;color:#047857}
+            .panel table{border:0}
+            .panel th,.panel td{border:0;border-bottom:1px solid #eef1f5}
         </style>
     </head>
     <body>
@@ -100,7 +127,7 @@
                 <section class="shot" id="p3">
                     <h3>3. Student Dashboard</h3>
                     <div class="screen">
-                        <div class="top"><span>E-Aduan Kolej</span><small>Hi, Nur Aina · <u>Logout</u></small></div>
+                        <div class="top"><span>E-Aduan Kolej</span><small>Hi, Farzana · <u>Logout</u></small></div>
                         <div class="side">
                             <div class="menu">
                                 <div class="on">Dashboard</div>
@@ -108,20 +135,53 @@
                                 <div>My Tickets</div>
                             </div>
                             <div>
-                                <table>
-                                    <tr><th>Pending</th><th>In Progress</th><th>Resolved</th></tr>
-                                    <tr><td>1</td><td>1</td><td>3</td></tr>
-                                </table>
-                                <br>
-                                <span class="btn">+ New Complaint</span>
+                                <p class="crumb">Home / Dashboard</p>
+                                <p class="page-title">Dashboard</p>
+
+                                <div class="boxes">
+                                    <div class="ibox amber">
+                                        <div class="in"><div><div class="num">1</div><div class="lab">Pending</div></div>
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                                        <span class="more">More info →</span>
+                                    </div>
+                                    <div class="ibox blue">
+                                        <div class="in"><div><div class="num">1</div><div class="lab">In Progress</div></div>
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 6l4 4-8 8H6v-4z"/><path d="M13 7l4 4"/></svg></div>
+                                        <span class="more">More info →</span>
+                                    </div>
+                                    <div class="ibox green">
+                                        <div class="in"><div><div class="num">3</div><div class="lab">Resolved</div></div>
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+                                        <span class="more">More info →</span>
+                                    </div>
+                                </div>
+
+                                <div class="panel">
+                                    <div class="panel-h">My Tickets by Category <span>Total: 5</span></div>
+                                    <div class="panel-b">
+                                        <div class="bars">
+                                            <div style="height:66%"><b>2</b></div>
+                                            <div style="height:33%"><b>1</b></div>
+                                            <div style="height:66%"><b>2</b></div>
+                                        </div>
+                                        <div class="bar-lab"><span>Electrical</span><span>Plumbing</span><span>Furniture</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="panel">
+                                    <div class="panel-h">Recent Tickets <span><u>View all</u></span></div>
+                                    <table>
+                                        <tr><th>ID</th><th>Title</th><th>Date</th><th>Status</th></tr>
+                                        <tr><td>T003</td><td>Kerusi patah</td><td>20 Nov</td><td><span class="pill p-pending">Pending</span></td></tr>
+                                        <tr><td>T002</td><td>Lampu rosak</td><td>18 Nov</td><td><span class="pill p-progress">In Progress</span></td></tr>
+                                        <tr><td>T001</td><td>Katil rosak</td><td>10 Nov</td><td><span class="pill p-resolved">Resolved</span></td></tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="note">Shows a summary of the student's own tickets by status. The side menu links to other student pages.</div>
+                    <div class="note">Shows the student's own tickets by status, by category and the latest tickets. "More info" opens My Tickets filtered by that status, and "View all" opens the full list.</div>
                 </section>
-
-
-            </div>
            
         </main>
     </body>
